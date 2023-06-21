@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+body {
+  background-color: #f8f9d2;
+  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+}
+.main {
+  max-width: 600px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.input-container {
+  position: absolute;
+  width: 600px;
+  top: 35px;
+}
+.active .input-container {
+  transform: translateY(-250px);
+  transition: all 0.3s linear;
+}
+.weather-result {
+  transform: translateY(300px);
+}
+.active .weather-result {
+  transform: translateY(15px);
+  transition: all 0.3s linear;
+}
+
+.container-title {
+  font-weight: 800;
+  color: #000 !important;
+}
+.info #city_name {
+  font-size: 18px;
+  font-weight: 600;
+}
+.info #date {
+  font-size: 16px;
+  font-weight: 500;
+  color: #808080;
+}
+.info #temp {
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+.info #condition-text {
+  font-size: 17px;
+  font-weight: 700;
+  color: #808080;
+}
+.other_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.alt_info {
+  background-color: #fff;
+  border-radius: 20px;
+  height: 80px;
+  width: 47%;
+  padding: 16px;
+  padding-left: 40px;
+}
+.alt_info h6 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #808080;
+}
+.alt_info p {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+@media screen and (max-width : 622px) {
+  .input-container , .main {
+    width: 400px;
+  }
+  .other_info {
+    flex-direction: column;
+  }
+  .alt_info {
+    background-color: #fff;
+    border-radius: 20px;
+    height: 80px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .weather-result {
+    transform: translateY(400px);
+  }
+
+  .input-container {
+    top: 70px;
+  }
+}

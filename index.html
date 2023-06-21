@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="container main" id="main">
+      <div class="wrapper p-3 text-center input-container">
+        <h2 class="text-primary pb-3 container-title">Weather Tracker</h2>
+        <input
+          class="mt-3 p-2 w-50 rounded"
+          id="inputCity"
+          type="text"
+          placeholder="Enter City Name"
+          required=""
+        />
+        <div
+          class="button-section d-flex justify-content-center align-items-center"
+        >
+          <button id="submit" class="btn btn-success d-block mt-2 w-50">
+            Submit
+          </button>
+        </div>
+      </div>
+      <div class="weather-result">
+        <div class="info d-flex align-items-center justify-content-center flex-column">
+          <h3 id="city_name">Dhaka</h3>
+          <h4 id="date">22-06-2023</h4>
+          <div class="condition_timg" id="condition-img">
+            <img src="" alt="" />
+          </div>
+          <p id="temp">30 C</p>
+          <p id="condition-text">Thundery outbreaks possible</p>
+        </div>
+
+        <div class="other_info">
+          <div class="alt_info">
+            <h6>Wind</h6>
+            <p id="wind"></p>
+          </div>
+          <div class="alt_info">
+            <h6>Humidity</h6>
+            <p id="humidity"></p>
+          </div>
+        </div>
+
+        <h3 class="pt-3" id="city"></h3>
+        <p class="h3"><span id="temp"></span></p>
+        <p class="h4"><span id="hum"></span></p>
+        <p id="des"></p>
+        <h3 class="text-danger" id="country"></h3>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

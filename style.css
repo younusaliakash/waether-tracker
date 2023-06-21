@@ -12,6 +12,7 @@ body {
   justify-content: center;
   overflow: hidden;
   height: 100vh;
+  position: relative;
 }
 .main {
   max-width: 600px;
@@ -89,9 +90,27 @@ body {
   font-size: 17px;
   font-weight: 700;
 }
+.error {
+  position: absolute;
+  top: 30px;
+  left: 42%;
+  /* transform: translate(-50%, -50%); */
+  padding: 5px;
+  background-color: red;
+  border-radius: 20px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 12px;
+  transform: translateY(-100px);
+  transition: all 0.2s linear;
+}
+.error.enable {
+  transform: translateY(0px);
+}
 
-@media screen and (max-width : 622px) {
-  .input-container , .main {
+@media screen and (max-width: 622px) {
+  .input-container,
+  .main {
     width: 400px;
   }
   .other_info {
@@ -112,5 +131,9 @@ body {
 
   .input-container {
     top: 70px;
+  }
+  .error {
+
+    left: 33%;
   }
 }
